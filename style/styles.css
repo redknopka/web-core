@@ -60,35 +60,35 @@ html {
 }
 .item-burger {
     display: none;
-    background: url("/img/ic/burger/burger.svg") no-repeat;
+    background: url("/../img/ic/burger/burger.svg") no-repeat;
 }
 .item-group {
     display: none;
     width: 98.55px;
     height: 50.81px;
     border-radius: 0;
-    background: url("/img/group.svg") no-repeat;
+    background: url("/../img/group.svg") no-repeat;
 }
 .item-call {
     display: none;
-    background: url("/img/ic/call/call.svg") no-repeat;
+    background: url("/../img/ic/call/call.svg") no-repeat;
 }
 .item-chat {
     display: none;
-    background: url("/img/ic/chat/chat.svg") no-repeat;
+    background: url("/../img/ic/chat/chat.svg") no-repeat;
 }
 .item-profile {
     display: none;
-    background: url("/img/ic/profile/profile.svg") no-repeat;
+    background: url("/../img/ic/profile/profile.svg") no-repeat;
 }
 .item-repair {
     display: none;
-    background: url("/img/ic/repair/repair.svg") no-repeat;
+    background: url("/../img/ic/repair/repair.svg") no-repeat;
 }
 
 .item-checkstatus {
     display: none;
-    background: url("/img/ic/checkstatus/checkstatus.svg") no-repeat;
+    background: url("/../img/ic/checkstatus/checkstatus.svg") no-repeat;
 }
 .description__part1, .description__part2, .description__part3 {
     display: none;
@@ -154,7 +154,7 @@ html {
     font-weight: 600;
 }
 .aside__read-more::before {
-    content: url(/img/ic/icon.svg);
+    content: url(/../img/ic/icon.svg);
     margin-right: 10px;
 
 }
@@ -328,10 +328,10 @@ html {
         width: 170px;
     }
     .item-repair:after {
-        content: url("/img/ic/repair/repair.svg");
+        content: url("/../img/ic/repair/repair.svg");
     }
     .item-checkstatus::after {
-        content: url("/img/ic/checkstatus/checkstatus.svg");
+        content: url("/../img/ic/checkstatus/checkstatus.svg");
     }
     .services {
         flex-wrap: wrap;
