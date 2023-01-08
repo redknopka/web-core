@@ -1,0 +1,125 @@
+body {
+    max-width: 320px;
+    height: 1024px;
+    font-family: "TT Lakes", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-family: "TT Lakes", sans-serif;
+}
+.menu__header {
+    display: flex;
+    align-items: center;
+    width: 320px;
+    height: auto;
+    margin-bottom: 46px;
+
+}
+.menu__header-button {
+    border: 0;
+}
+.menu__header-button_form_circle {
+    margin-top: 16px;
+    height: 40px;
+    width: 40px;
+    border: 0;
+    border-radius: 50%;
+    margin-bottom: 16px;
+
+}
+.item-close {
+    background: url("../img/ic/close/close.svg") no-repeat;
+    margin-left: 24px;
+    margin-right: 16px;
+}
+.item-group {
+    background: url("../img/group.svg") no-repeat;
+    height: 51px;
+    width: 97px;
+    margin-right: 80px;
+    border-radius: 0;
+}
+.item-search {
+    background: url("../img/ic/search/search.svg") no-repeat;
+}
+.menu__list {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    max-width: 320px;
+}
+.menu__list-item {
+    font-family: "TT Lakes", serif;
+    font-size: 16px;
+    border: 0;
+    background-color: transparent;
+    color: #1B1C21;
+    margin-bottom: 24px;
+    margin-left: 24px;
+    font-weight: 500;
+    height: 32px;
+    padding: 0;
+}
+.menu__list-item:focus, .menu__list-item:hover {
+    color: #7E7E82;
+    display: flex;
+    align-items: center;
+    margin-left: 0px;
+
+}
+.menu__list-item:focus::before, .menu__list-item:hover::before {
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 32px;
+    background: #41F6D7;
+    border-radius: 0px 4px 4px 0px;
+    margin-right: 20px;
+}
+.menu__functions {
+    margin-top: auto;
+    display: flex;
+    gap: 16px;
+}
+.menu__functions-button {
+
+}
+.item-call {
+    margin-left: 24px;
+    background: url("../img/ic/call/call.svg") no-repeat;
+}
+.item-chat {
+    background: url("../img/ic/chat/chat.svg") no-repeat;
+}
+.item-profile {
+    background: url("../img/ic/profile/profile.svg") no-repeat;
+}
+.footer__info {
+    margin-left: 24px;
+}
+.footer__info-item {
+    margin-bottom: 16px;
+}
+.footer__link {
+    text-decoration: none;
+    color: #1B1C21;
+}
+.footer__telephone {
+    font-weight: bold;
+    font-size: 24px;
+}
+.footer__langs {
+    margin-left: 14px;
+}
+input[type="radio"]{
+    visibility: hidden;
+    height: 0;
+    width: 0;
+}
+.lang-text {
+    font-weight: 500;
+}
+input:checked + .lang-text {
+    color: #7E7E82;
+}
