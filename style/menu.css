@@ -5,6 +5,9 @@ body {
     margin: 0;
     padding: 0;
 }
+.menu {
+    box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2);
+}
 html {
     font-family: "TT Lakes", sans-serif;
 }
@@ -19,7 +22,7 @@ html {
 .menu__header-button {
     border: 0;
 }
-.button_form_circle {
+.menu__button_form_circle {
     margin-top: 16px;
     height: 40px;
     width: 40px;
@@ -27,7 +30,7 @@ html {
     border-radius: 50%;
     margin-bottom: 16px;
 }
-.button_form_circle:focus, .button_form_circle:hover {
+.menu__button_form_circle:focus, .menu__button_form_circle:hover {
     transition: 0.6s;
     filter: invert(1) saturate(3);
 }
@@ -80,12 +83,15 @@ html {
     border-radius: 0px 4px 4px 0px;
     margin-right: 20px;
 }
-.menu__functions {
+.footer {
+    display: flex;
+}
+.footer__functions {
     margin-top: auto;
     display: flex;
     gap: 16px;
 }
-.menu__functions-button {
+.footer__functions-button {
 
 }
 .item-call {
