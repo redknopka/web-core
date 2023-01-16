@@ -22,7 +22,7 @@ html {
 .menu__header-button {
     border: 0;
 }
-.menu__button_form_circle {
+.menu__button {
     margin-top: 16px;
     height: 40px;
     width: 40px;
@@ -30,7 +30,7 @@ html {
     border-radius: 50%;
     margin-bottom: 16px;
 }
-.menu__button_form_circle:focus, .menu__button_form_circle:hover {
+.menu__button:focus, .menu__button:hover {
     transition: 0.6s;
     filter: invert(1) saturate(3);
 }
