@@ -81,14 +81,9 @@
     flex-wrap: wrap;
     gap: 16px;
 }
-
 .swiper-slide {
     height: 72px;
     width: 240px;
-}
-
-.swiper-pagination {
-    margin-bottom: 14px;
 }
 
 .swiper-pagination-bullet {
@@ -98,7 +93,6 @@
     opacity: 1;
     position: relative;;
 }
-
 .swiper-pagination-bullet-active {
     background-color: #B5B6BC;
     opacity: 1;
