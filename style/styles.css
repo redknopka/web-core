@@ -154,7 +154,7 @@ html {
     font-weight: 600;
 }
 .aside__read-more::before {
-    content: url(../img/ic/icon.svg);
+    content: url(../img/ic/down.svg);
     margin-right: 10px;
 
 }
