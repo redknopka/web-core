@@ -103,10 +103,12 @@
     }
     .swiper-wrapper {
         flex-wrap: nowrap;
-        gap: 0;
     }
     .brands__list {
         height: 130px;
+    }
+    .brands__card {
+        margin-left: 0px;
     }
 
 }
