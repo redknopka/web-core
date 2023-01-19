@@ -1,6 +1,9 @@
 const MIN_HEIGHT_GRID_4 = 1119;
 const MIN_HEIGHT_GRID_3 = 767;
 const MOBI_HEIGHT = 768;
+const GRID_ROW_MOBI = 6;
+const GRID_ROW_DESKTOP = 8;
+const AMOUNT_CARDS = 11;
 function initSlider() {
     if (window.innerWidth < MOBI_HEIGHT ) {
         let slider = document.querySelector('.swiper');
@@ -23,14 +26,12 @@ let brandsContainer = document.querySelectorAll('.brands__card');
 
 var hideCards = function() {
     if (window.innerWidth > MIN_HEIGHT_GRID_3 && window.innerWidth < MIN_HEIGHT_GRID_4) {
-        let amountShowedCards = 6;
-        for (let i = amountShowedCards; i < 11; i++) {
+        for (let i = GRID_ROW_MOBI; i < AMOUNT_CARDS; i++) {
             brandsContainer[i].classList.add('invisible');
         }
     }
     if (window.innerWidth > MIN_HEIGHT_GRID_4) {
-        let amountShowedCards = 8;
-        for (let i = amountShowedCards; i < 11; i++) {
+        for (let i = GRID_ROW_DESKTOP; i < AMOUNT_CARDS; i++) {
             brandsContainer[i].classList.add('invisible');
         }
     }
@@ -44,7 +45,7 @@ buttonShowMoreLess.addEventListener('click', function() {
         buttonShowMoreLess.classList.remove('show-more');
         buttonShowMoreLess.classList.add('show-less');
         buttonShowMoreLess.textContent = 'Скрыть';
-        for (let i = 0; i < 11; i++) {
+        for (let i = 0; i < AMOUNT_CARDS; i++) {
             brandsContainer[i].classList.remove('invisible');
         }
     }
