@@ -1,5 +1,8 @@
+const MIN_HEIGHT_GRID_4 = 1119;
+const MIN_HEIGHT_GRID_3 = 767;
+const MOBI_HEIGHT = 768;
 function initSlider() {
-    if (window.innerWidth < 768 ) {
+    if (window.innerWidth < MOBI_HEIGHT ) {
         let slider = document.querySelector('.swiper');
         let newSwiper = new Swiper(slider, {
             spaceBetween: 16,
@@ -14,46 +17,41 @@ function initSlider() {
 }
 initSlider();
 
-if (window.innerWidth > 767 && window.innerWidth < 1119) {
-    let amountShowedCards = 6;
-    let brandsContainer = document.querySelectorAll('.brands__card');
-    for (let i = amountShowedCards; i < 11; i++) {
-        brandsContainer[i].classList.add('invisible');
-    }
-}
-if (window.innerWidth > 1119) {
-    let amountShowedCards = 8;
-    let brandsContainer = document.querySelectorAll('.brands__card');
-    for (let i = amountShowedCards; i < 11; i++) {
-        brandsContainer[i].classList.add('invisible');
-    }
-}
 
-let buttonShowLess = document.querySelector('.show-less');
-let buttonShowMore = document.querySelector('.show-more');
-buttonShowMore.addEventListener('click', function() {
-    buttonShowMore.classList.add('invisible');
-    buttonShowLess.classList.remove('invisible');
-    let brandsContainer = document.querySelectorAll('.brands__card');
-    for (let i = 0; i < 11; i++) {
-        brandsContainer[i].classList.remove('invisible');
-    }
-});
-buttonShowLess.addEventListener('click', function() {
-    buttonShowLess.classList.add('invisible');
-    buttonShowMore.classList.remove('invisible');
-    let brandsContainer = document.querySelectorAll('.brands__card');
-    if (window.innerWidth > 767 && window.innerWidth < 1119) {
+
+let brandsContainer = document.querySelectorAll('.brands__card');
+
+var hideCards = function() {
+    if (window.innerWidth > MIN_HEIGHT_GRID_3 && window.innerWidth < MIN_HEIGHT_GRID_4) {
         let amountShowedCards = 6;
         for (let i = amountShowedCards; i < 11; i++) {
             brandsContainer[i].classList.add('invisible');
         }
     }
-    if (window.innerWidth > 1119) {
+    if (window.innerWidth > MIN_HEIGHT_GRID_4) {
         let amountShowedCards = 8;
-        let brandsContainer = document.querySelectorAll('.brands__card');
         for (let i = amountShowedCards; i < 11; i++) {
             brandsContainer[i].classList.add('invisible');
         }
+    }
+}
+
+hideCards();
+let buttonShowMoreLess = document.querySelector('.brands__footer-button');
+buttonShowMoreLess.addEventListener('click', function() {
+    let brandsContainer = document.querySelectorAll('.brands__card');
+    if (buttonShowMoreLess.classList.contains('show-more')) {
+        buttonShowMoreLess.classList.remove('show-more');
+        buttonShowMoreLess.classList.add('show-less');
+        buttonShowMoreLess.textContent = 'Скрыть';
+        for (let i = 0; i < 11; i++) {
+            brandsContainer[i].classList.remove('invisible');
+        }
+    }
+    else if (buttonShowMoreLess.classList.contains('show-less')) {
+        buttonShowMoreLess.classList.remove('show-less');
+        buttonShowMoreLess.classList.add('show-more');
+        buttonShowMoreLess.textContent = 'Показать все';
+        hideCards();
     }
 });
