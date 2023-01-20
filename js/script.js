@@ -24,7 +24,7 @@ initSlider();
 
 let brandsContainer = document.querySelectorAll('.brands__card');
 
-var hideCards = function() {
+let hideCards = function() {
     if (window.innerWidth > MIN_HEIGHT_GRID_3 && window.innerWidth < MIN_HEIGHT_GRID_4) {
         for (let i = GRID_ROW_MOBI; i < AMOUNT_CARDS; i++) {
             brandsContainer[i].classList.add('invisible');
